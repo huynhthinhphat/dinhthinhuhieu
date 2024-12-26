@@ -5,16 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.gplx.entities.Question;
-import com.example.gplx.repository.QuestionRepository;
+import com.example.gplx.entities.TrafficSigns;
+import com.example.gplx.repository.TrafficSignsRepository;
 
 @Service
-public class CauHoiService {
+public class TrafficSignsService {
 
 	@Autowired
-	private QuestionRepository repo;
+	private TrafficSignsRepository repo;
 	
-	public List<Question> findAll(){
+	public List<TrafficSigns> findAll(){
 		return repo.findAll();
 	}
 }

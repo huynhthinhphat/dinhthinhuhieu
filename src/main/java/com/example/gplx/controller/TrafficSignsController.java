@@ -7,18 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.gplx.entities.CauHoi;
-import com.example.gplx.service.CauHoiService;
+import com.example.gplx.entities.TrafficSigns;
+import com.example.gplx.service.TrafficSignsService;
 
 @RestController
-@RequestMapping("/cauhoi")
-public class CauHoiController {
-
-	@Autowired
-	private CauHoiService service;
+@RequestMapping("/traffic_signs")
+public class TrafficSignsController {
 	
+	@Autowired
+	private TrafficSignsService service;
+
 	@GetMapping()
-	private List<CauHoi> findAll(){
+	private List<TrafficSigns> findAll(){
 		return service.findAll();
 	}
+	
 }
