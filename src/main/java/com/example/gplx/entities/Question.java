@@ -8,20 +8,20 @@ public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String questionText; // Nội dung câu hỏi
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String option1; // Lựa chọn 1
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String option2; // Lựa chọn 2
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String option3; // Lựa chọn 3
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String option4; // Lựa chọn 4
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String correctAnswer; // Lựa chọn đúng (1, 2, 3, hoặc 4)
 	private String questionType; // Loại câu hỏi
-	@Column(columnDefinition = "VARCHAR(5000)")
+	@Column(columnDefinition = "TEXT")
 	private String explanation; // Giải thích
 	private String imageUrl;
 	private int topic;
