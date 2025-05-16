@@ -13,8 +13,20 @@ public class CauHoiService {
 
 	@Autowired
 	private QuestionRepository repo;
-	
-	public List<Question> findAll(){
+
+	public List<Question> findAll() {
 		return repo.findAll();
+	}
+
+	public Question findByID(int id) {
+		return repo.findById(id).orElseThrow();
+	}
+
+	public List<Question> findByType(String questionType) {
+		return repo.findByQuestionType(questionType);
+	}
+
+	public List<Question> findAllQuestionsByTopic(int topic) {
+		return repo.findAllByTopic(topic);
 	}
 }

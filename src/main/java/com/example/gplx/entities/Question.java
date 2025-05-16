@@ -7,21 +7,24 @@ public class Question {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
+	private int id;
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String questionText; // Nội dung câu hỏi
-
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String option1; // Lựa chọn 1
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String option2; // Lựa chọn 2
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String option3; // Lựa chọn 3
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String option4; // Lựa chọn 4
-
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String correctAnswer; // Lựa chọn đúng (1, 2, 3, hoặc 4)
-
 	private String questionType; // Loại câu hỏi
+	@Column(columnDefinition = "VARCHAR(5000)")
 	private String explanation; // Giải thích
-
 	private String imageUrl;
+	private int topic;
 
 	public String getImageUrl() {
 		return imageUrl;
@@ -32,11 +35,11 @@ public class Question {
 	}
 
 	// Getters and Setters
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -102,5 +105,13 @@ public class Question {
 
 	public void setExplanation(String explanation) {
 		this.explanation = explanation;
+	}
+
+	public void setTopic(int topic) {
+		this.topic = topic;
+	}
+
+	public int getTopic() {
+		return this.topic;
 	}
 }
